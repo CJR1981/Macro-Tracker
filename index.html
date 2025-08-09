@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Macro Tracker</title>
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>Macro Tracker</h1>
+  <div id="userControls">
+    <select id="userSelect"></select>
+    <button id="switchUserBtn">Switch</button>
+    <button id="addUserBtn">Add User</button>
+  </div>
+  <input type="date" id="datePicker" />
+</header>
+
+<main>
+  <section id="summary">
+    <div id="goalDisplay"></div>
+    <div id="progressBars"></div>
+  </section>
+
+  <section id="mealSections"></section>
+
+  <section id="addFoodForm">
+    <select id="mealSelect">
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Snacks">Snacks</option>
+    </select>
+    <input type="text" id="foodName" placeholder="Food name" />
+    <input type="number" id="grams" placeholder="Quantity (g)" />
+    <input type="number" id="calories" placeholder="Calories" />
+    <input type="number" id="protein" placeholder="Protein (g)" />
+    <input type="number" id="carbs" placeholder="Carbs (g)" />
+    <input type="number" id="fat" placeholder="Fat (g)" />
+    <button id="addFoodBtn">Add Food</button>
+    <button id="searchBtn">Search with ChatGPT</button>
+  </section>
+
+  <section id="settings">
+    <h3>Settings</h3>
+    <input type="password" id="apiKey" placeholder="OpenAI API Key" />
+    <button id="saveApiKeyBtn">Save API Key</button>
+
+    <h4>Goals</h4>
+    <input type="number" id="goalCalories" placeholder="Calories" />
+    <input type="number" id="goalProtein" placeholder="Protein (g)" />
+    <input type="number" id="goalCarbs" placeholder="Carbs (g)" />
+    <input type="number" id="goalFat" placeholder="Fat (g)" />
+    <button id="saveGoalsBtn">Save Goals</button>
+
+    <h4>Theme</h4>
+    <button id="toggleThemeBtn">Toggle Dark Mode</button>
+
+    <h4>Data</h4>
+    <button id="clearDataBtn">Clear All Data</button>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
